@@ -1,23 +1,29 @@
 pipeline {
   
-  agent any {
+  agent none {
     
     stages {
       
       stage ("build") {
         step {
+          script {
           echo "Building from Jenkinsfile"
+          }  
         }
       }  
       stage ("Test") {
         step {
-          echo "Testing from Jenkinsfile"
+          script {
+            echo "Testing from Jenkinsfile"
+          }  
         }
       }
       stage ("Deploy") {
         step {
-          echo "Deploying from Jenkinsfile"
-        }
+          script {
+            echo "Deploying from Jenkinsfile"
+          }          
+         }
       }
     }
   }
