@@ -1,30 +1,29 @@
+#!/usr/bin/env groovy
+
 pipeline {
-  
-  agent none 
-    
+    agent none
     stages {
-      
-      stage ("build") {
-        step {
-          script {
-          echo "Building from Jenkinsfile"
-          }  
+        stage('build') {
+            steps {
+                script {
+                    echo "Building the application..."
+                }
+            }
         }
-      }  
-      stage ("Test") {
-        step {
-          script {
-            echo "Testing from Jenkinsfile"
-          }  
+        stage('test') {
+            steps {
+                script {
+                    echo "Testing the application..."
+                }
+            }
         }
-      }
-      stage ("Deploy") {
-        step {
-          script {
-            echo "Deploying from Jenkinsfile"
-          }          
-         }
-      }
+        stage('deploy') {
+            steps {
+                script {
+                    echo "Deploying the application..."
+                }
+            }
+        }
     }
-  
 }
+
