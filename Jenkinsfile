@@ -1,6 +1,6 @@
 pipeline {
   
-  agent none {
+  agent none 
     
     stages {
       
@@ -26,5 +26,5 @@ pipeline {
          }
       }
     }
-  }
+  
 }
